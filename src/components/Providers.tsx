@@ -8,20 +8,15 @@ type Props = {
   children: React.ReactNode;
 };
 
-
 /**
  * Providers组件：包装应用程序并提供各种上下文
  * [React Query]、[主题设置]、[Clerk]
  */
 const Providers: React.FC<Props> = ({ children }: ThemeProviderProps) => {
   return (
-   
-     
-      <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </NextThemesProvider>
-
-   
+    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+      {children}
+    </NextThemesProvider>
   );
 };
 

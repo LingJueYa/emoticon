@@ -71,7 +71,7 @@ const EmojiDisplay = ({
           </>
         ) : (
           <p className="text-black/90 text-xl dark:text-white/60">
-            ⁽⁽٩(๑˃̶͈̀ ᗨ ˂̶͈́)۶⁾⁾
+            ⁽⁽٩(๑˃̶͈̀ ᗨ ˂̶͈́)۶⁾⁾ 就等您输入啦！
           </p>
         )}
       </div>
