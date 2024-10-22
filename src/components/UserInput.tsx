@@ -54,7 +54,7 @@ const UserInput = ({ onEmojiResponse }: UserInputProps) => {
     >
       <Input
         type="text"
-        placeholder="描述你想要的颜文字"
+        placeholder="描述您想要的颜文字"
         {...register("emojiDescription")}
         className="flex-grow h-full bg-white/90 rounded-lg px-5 py-2 text-lg focus:outline-none placeholder:text-gray-500  dark:bg-[#171717] dark:placeholder:text-white/60 dark:text-white/70"
       />
