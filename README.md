@@ -1,99 +1,54 @@
-# Next.js 开发套件
+# 颜文字 Ya~ (⁎⁍̴̛ᴗ⁍̴̛⁎)
 
-这是一个功能丰富的 Next.js 开发套件,集成了多种常用工具和库,旨在提高开发效率。
+欢迎来到颜文字 Ya~，一个充满乐趣和创意的颜文字生成网站！ヾ(≧▽≦*)o
 
-## 主要特性
+## 🌟 主要特性
 
-- 使用 TypeScript 进行类型安全的开发
-- 采用 TailwindCSS 进行快速样式设计
-- 集成 Shadcn UI 组件库
-- 使用 Prisma ORM 进行数据库操作
-- 集成 OpenAI API 支持
-- 使用 Next-auth 进行身份验证和用户管理
-- 表单处理使用 React Hook Form
-- 日期国际化支持 (internationalized/date)
-- 使用 Valtio 进行状态管理
-- 集成 Resend 用于邮件发送
-- 引入 usehooks-ts 和 ahooks 实用 hooks
-- 使用 Zod 进行数据验证
-- 集成 AWS S3 SDK 用于文件存储
-- 使用 React Query 进行数据获取和缓存
+- 🎭 **智能生成**：根据您的描述自动创建独特的颜文字
+- 📝 **配套文案**：每组颜文字都配有妙趣横生的文字说明
+- 🌈 **丰富多样**：提供多种风格的颜文字，满足不同场景需求
+- 🚀 **快速便捷**：简单输入，即刻获得创意十足的颜文字
 
-## 安装
+## 💡 如何使用
 
-```bash
-npm install
-# 或
-yarn install
+1. 在输入框中描述您想要的颜文字风格或情境
+2. 点击生成按钮，等待片刻
+3. 欣赏为您量身定制的颜文字和文案
+4. 复制您喜欢的内容，随心所欲地使用！
+
+## 🎨 示例
+
+输入: "开心"
+输出:
+
+```
+(≧▽≦) 今天阳光明媚，心情舒畅！
+(*^▽^*) 收到了好消息，开心得跳起来！
+(●ˇ∀ˇ●) 和朋友相聚，笑声不断！
+ヾ(^▽^*))) 终于完成了难题，成就感满满！
 ```
 
-## Prisma 数据库操作
+## 🛠️ 技术栈
 
-### 初始化 Prisma
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Dify
 
-```bash
-npx prisma init
-```
+## 🤝 贡献
 
-### 生成 Prisma 客户端
+我们欢迎各种形式的贡献，无论是新功能建议、bug报告还是代码提交。让我们一起让这个项目变得更好！(๑•̀ㅂ•́)و✧
 
-```bash
-npx prisma generate
-```
+## 特别感谢
 
-### 创建数据库迁移
+[kaomoji.ai](https://kaomoji.ai/zh) - 在这个可爱的网站中找到灵感！
 
-在修改 schema 后使用:
+## 📜 许可证
 
-```bash
-npx prisma migrate dev --name <migration-name>
-```
+本项目采用MIT许可证。详情请见[LICENSE](LICENSE)文件。
 
-### 推送架构更改到数据库
+---
 
-仅用于开发环境,不创建迁移记录:
-
-```bash
- sudo npx prisma db push
-```
-
-### 查看数据库内容
-
-```bash
-npx prisma studio
-```
-
-### 格式化 schema 文件
-
-```bash
-npx prisma format
-```
-
-## 开发
-
-```bash
-npm run dev
-# 或
-yarn dev
-```
-
-## 构建
-
-```bash
-npm run build
-# 或
-yarn build
-```
-
-## 部署
-
-详细的部署说明请参考 [Next.js 部署文档](https://nextjs.org/docs/deployment)。
-
-## 贡献
-
-欢迎提交 issues 和 pull requests 来改进这个开发套件。
-
-## 许可证
-
-[MIT](LICENSE)
-
+让我们一起在文字的海洋中畅游，创造出更多有趣的颜文字吧！(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
