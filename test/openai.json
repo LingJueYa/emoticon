@@ -1,0 +1,35 @@
+{
+    "name": "emoticon",
+    "description": "A json template for generating emojis",
+    "strict": true,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "emoticon_one": {
+                "type": "string",
+                "description": "This is first emoticon"
+            },
+            "emoticon_two": {
+                "type": "string",
+                "description": "This is second emoticon"
+            },
+            "emoticon_three": {
+                "type": "string",
+                "description": "This is third emoticon"
+            },
+            "emoticon_four": {
+                "type": "string",
+                "description": "This is fourth emoticon"
+            },
+            "sentence": {
+                "type": "string",
+                "description": "The copy that goes with the emoji"
+            }
+        },
+        "required": ["emoticon_one", "emoticon_two", "emoticon_three", "emoticon_four", "sentence"],
+        "additionalProperties": false
+    }
+}
+
+
+
