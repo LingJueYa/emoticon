@@ -1,7 +1,6 @@
 "use client";
 // 主页
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import UserInput from "@/components/UserInput";
 import EmojiDisplay from "@/components/EmojiDisplay";
 
@@ -50,21 +49,25 @@ const Home = () => {
               颜文字 Ya ~
             </h1>
             <p className="mt-4 mb-12 text-2xl text-[#504f4f] text-center dark:text-white/60">
-              在下方输入一些场景，即可生成颜文字喔 (*´∀)~♥ ！
+              欢迎来到颜文字与文案的世界，让我们一起为生活增添色彩 (*´∀)~♥ ！
             </p>
-            <Image
+            {/* <Image
               src="/svg/go.svg"
               width={100}
               height={100}
               className="hidden md:block absolute top-8 -right-32"
               alt="go"
-            />
+            /> */}
           </div>
           <div className="w-full max-w-[600px] mb-8 backdrop-blur-lg">
             <UserInput onEmojiResponse={handleEmojiResponse} />
           </div>
           <EmojiDisplay {...emojiData} />
           <div ref={bottomRef} />
+          <div className="mt-8 text-center text-sm text-gray-500 dark:text-white/60">
+            内容由 AI
+            智能助手生成，不代表平台观点、立场或态度，请理性友善地使用和创作内容
+          </div>
         </div>
       </main>
     </div>
