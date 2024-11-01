@@ -50,16 +50,41 @@ const UserInput = ({ onEmojiResponse }: UserInputProps) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex items-center space-x-3 w-full h-[65px] mb-6 rounded-lg"
+      className="flex items-center gap-4 w-full h-[64px] mb-8 relative"
     >
       <Input
         type="text"
         placeholder="告诉我您的心情，我将为您定制专属的颜文字和文案。"
         {...register("emojiDescription")}
-        className="flex-grow h-full bg-white/90 rounded-lg px-5 py-2 text-lg focus:outline-none placeholder:text-gray-500  dark:bg-[#171717] dark:placeholder:text-white/60 dark:text-white/70"
+        className="
+          flex-grow 
+          h-full 
+          bg-white/90 
+          backdrop-blur-md 
+          rounded-2xl 
+          px-6
+          text-[15px] 
+          border 
+          border-gray-100/30
+          shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+          focus:outline-none 
+          focus:ring-1 
+          focus:ring-gray-100/50 
+          focus:border-gray-200/50
+          focus:bg-white/95
+          placeholder:text-gray-400/90
+          dark:bg-[#1a1a1a]/85 
+          dark:border-gray-800/40
+          dark:focus:ring-gray-700/30 
+          dark:focus:border-gray-700/50
+          dark:placeholder:text-gray-500 
+          dark:text-white/90
+          transition-all 
+          duration-300
+        "
       />
       {errors.emojiDescription && (
-        <span className="text-red-500 text-sm absolute -bottom-6 left-0">
+        <span className="text-red-500/90 text-[13px] absolute -bottom-6 left-2">
           {errors.emojiDescription.message}
         </span>
       )}
@@ -68,12 +93,27 @@ const UserInput = ({ onEmojiResponse }: UserInputProps) => {
         variant="outline"
         size="icon"
         disabled={isLoading}
-        className="w-[60px] h-full rounded-lgdark:bg-[#171717]"
+        className="
+          w-[64px] 
+          h-full 
+          rounded-2xl 
+          bg-white/90 
+          backdrop-blur-md
+          border 
+          border-gray-100/30 
+          shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+          hover:bg-orange-50/50 
+          dark:bg-[#1a1a1a]/85 
+          dark:border-gray-800/40
+          dark:hover:bg-gray-800/40 
+          transition-all 
+          duration-300
+        "
       >
         {isLoading ? (
-          <span className="animate-spin text-2xl">⏳</span>
+          <span className="animate-spin text-xl">⏳</span>
         ) : (
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-5 w-5 text-gray-500 dark:text-white/70" />
         )}
       </Button>
     </form>

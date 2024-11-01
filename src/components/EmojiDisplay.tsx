@@ -24,25 +24,59 @@ const EmojiDisplay = ({
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast({
-      title: `“ ${text} ” 复制成功啦！`,
+      title: `" ${text} " 复制成功啦！`,
     });
   };
 
   const renderEmojiBlock = (emoji: string) => (
-    <div className="relative p-6 bg-white/90 rounded-lg shadow-md min-h-[140px] min-w-[280px] flex items-center justify-center dark:bg-[#171717]">
+    <div className="
+      relative 
+      p-8 
+      bg-white/85 
+      backdrop-blur-md 
+      rounded-2xl 
+      shadow-[0_8px_30px_rgb(0,0,0,0.04)] 
+      min-h-[160px] 
+      min-w-[280px] 
+      flex 
+      items-center 
+      justify-center 
+      border
+      border-gray-50
+      transition-all
+      duration-300
+      hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]
+      hover:bg-white/90
+      dark:bg-[#171717]/90
+      dark:border-gray-800
+      dark:hover:bg-[#171717]/95
+    ">
       {emoji ? (
         <>
           <button
             onClick={() => copyToClipboard(emoji)}
-            className="absolute top-3 right-3 text-gray-600 hover:text-white/60"
+            className="
+              absolute 
+              top-4 
+              right-4 
+              p-2 
+              rounded-lg
+              text-gray-400 
+              hover:text-gray-600
+              hover:bg-gray-50/50
+              transition-colors
+              duration-200
+              dark:hover:bg-gray-800/50
+              dark:hover:text-gray-300
+            "
             aria-label="复制表情"
           >
-            <Copy size={18} />
+            <Copy size={16} />
           </button>
-          <p className="text-3xl text-center dark:text-white/60">{emoji}</p>
+          <p className="text-4xl text-center text-gray-800 dark:text-white/80">{emoji}</p>
         </>
       ) : (
-        <p className="text-black/90 text-xl dark:text-white/60">
+        <p className="text-gray-600 text-xl dark:text-white/60">
           ⁽⁽٩(๑˃̶͈̀ ᗨ ˂̶͈́)۶⁾⁾
         </p>
       )}
@@ -50,27 +84,60 @@ const EmojiDisplay = ({
   );
 
   return (
-    <div className="space-y-6 mb-3">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <div className="space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {renderEmojiBlock(emoticon_one)}
         {renderEmojiBlock(emoticon_two)}
         {renderEmojiBlock(emoticon_three)}
         {renderEmojiBlock(emoticon_four)}
       </div>
-      <div className="relative p-5 bg-white/90 rounded-lg shadow-md flex items-center min-h-[70px] dark:bg-[#171717]">
+      
+      <div className="
+        relative 
+        p-6 
+        bg-white/85 
+        backdrop-blur-md 
+        rounded-2xl 
+        shadow-[0_8px_30px_rgb(0,0,0,0.04)] 
+        flex 
+        items-center 
+        min-h-[80px]
+        border
+        border-gray-50
+        transition-all
+        duration-300
+        hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]
+        hover:bg-white/90
+        dark:bg-[#171717]/90
+        dark:border-gray-800
+        dark:hover:bg-[#171717]/95
+      ">
         {sentence ? (
           <>
-            <p className="flex-grow text-lg dark:text-white/60">{sentence}</p>
+            <p className="flex-grow text-lg text-gray-700 leading-relaxed dark:text-white/80">
+              {sentence}
+            </p>
             <button
               onClick={() => copyToClipboard(sentence)}
-              className="ml-5 text-gray-500 hover:text-gray-700"
+              className="
+                ml-6 
+                p-2.5 
+                rounded-lg
+                text-gray-400 
+                hover:text-gray-600
+                hover:bg-gray-50/50
+                transition-colors
+                duration-200
+                dark:hover:bg-gray-800/50
+                dark:hover:text-gray-300
+              "
               aria-label="复制句子"
             >
-              <Copy size={18} />
+              <Copy size={16} />
             </button>
           </>
         ) : (
-          <p className="text-black/90 text-xl dark:text-white/60">
+          <p className="text-gray-600 text-xl dark:text-white/60">
             ⁽⁽٩(๑˃̶͈̀ ᗨ ˂̶͈́)۶⁾⁾ 就等您输入啦！
           </p>
         )}
